@@ -11,8 +11,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static utils.FileDownloader.readFileContent;
-
+import static utils.FileContentReader.readFileContent;
 
 public class DownloadFileTests {
     @Test
