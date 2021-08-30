@@ -12,12 +12,10 @@ repositories {
 
 dependencies {
     testImplementation(
-            "org.aspectj:aspectjweaver:1.9.6",
             "com.codeborne:selenide:5.21.0",
             "org.junit.jupiter:junit-jupiter-api:5.7.1",
             "org.slf4j:slf4j-api:1.7.30",
             "org.slf4j:slf4j-simple:1.7.30",
-            'io.qameta.allure:allure-selenide:2.14.0',
             'org.hamcrest:hamcrest:2.2',
             "com.codeborne:pdf-test:1.5.1",
             "com.codeborne:xls-test:1.4.3",

@@ -18,6 +18,5 @@ public class ZipTest {
         getZipFileFromPath(zipFilePath, null, unzipFolderPath);
         String actualData = readTextFromPath(unzipFolderPath+"/2.text");
         assertThat(actualData, containsString(expectedData));
-        System.out.println(actualData);
     }
 }
