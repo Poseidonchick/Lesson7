@@ -41,7 +41,7 @@ public class FileContentReader {
         return new XLS(getFileFromPath(path));
     }
 
-    // взять doc файл по указанному пути и распаковать его
+    // взять zip файл по указанному пути и распаковать его
     public static void getZipFileFromPath(String zipFilePath, String password, String unzipFolderPath) throws IOException {
         try {
             ZipFile zipFile = new ZipFile(getFileFromPath(zipFilePath));
