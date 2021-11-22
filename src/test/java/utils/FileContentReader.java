@@ -37,12 +37,12 @@ public class FileContentReader {
     }
 
     // взять xls файл по указанному пути и распарсить в строку
-    public static XLS getXlsFileFromPath(String path) throws IOException {
+    public static XLS getXlsFileFromPath(String path) {
         return new XLS(getFileFromPath(path));
     }
 
     // взять zip файл по указанному пути и распаковать его
-    public static void getZipFileFromPath(String zipFilePath, String password, String unzipFolderPath) throws IOException {
+    public static void getZipFileFromPath(String zipFilePath, String password, String unzipFolderPath) {
         try {
             ZipFile zipFile = new ZipFile(getFileFromPath(zipFilePath));
             if (zipFile.isEncrypted()) {
@@ -59,16 +59,14 @@ public class FileContentReader {
         FileInputStream inputStream = new FileInputStream(getFileFromPath(path));
         XWPFDocument docx = new XWPFDocument(inputStream);
         XWPFWordExtractor extractor = new XWPFWordExtractor(docx);
-        String docsText = extractor.getText();
-        return docsText;
+        return extractor.getText();
     }
     //Вернуть текст файла doc
     public static String readDocFile (String path) throws IOException {
         FileInputStream inputStream = new FileInputStream(getFileFromPath(path));
         HWPFDocument doc = new HWPFDocument(inputStream);
         WordExtractor extractor = new WordExtractor(doc);
-        String docsText = extractor.getText();
-        return docsText;
+        return extractor.getText();
     }
 }
 
